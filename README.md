@@ -7,9 +7,9 @@ Introduction
 ------------
 An HMOS library for creating social connection through icons
 
-Screenshot
+DEMO
 ----------
-![screenshot](screenshot.jpeg)
+![](socialconnector.gif)
 
 ## How to use
 
