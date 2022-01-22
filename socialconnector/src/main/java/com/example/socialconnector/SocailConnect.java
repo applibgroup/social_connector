@@ -34,6 +34,8 @@ public class SocailConnect extends Image implements Component.ClickedListener, o
 
     private Context d;
 
+    private String uri;
+
     private static final int  IMAGETYPE = 0;
 
     public SocailConnect(Context context) {
@@ -108,22 +110,27 @@ public class SocailConnect extends Image implements Component.ClickedListener, o
     public void launch()
     {
         Intent intent = new Intent();
-        String uri = "https://appgallery.cloud.huawei.com/appDetail?pkgName=";
+        String ur = getUrl();
 
         Operation operation = new Intent.OperationBuilder()
-                .withUri(Uri.parse(uri + "com.enrique.apprater"))
+                .withUri(Uri.parse(ur))
                 .build();
         intent.setOperation(operation);
         getC().startAbility(intent, AbilityInfo.AbilityType.WEB.ordinal());
     }
 
-    public void setContext(Context c)
+    public void setContext(Context c,String ur)
     {
         this.d=c;
+        this.uri=ur;
     }
 
     public Context getC()
     {
         return d;
+    }
+    public String getUrl()
+    {
+        return uri;
     }
 }
