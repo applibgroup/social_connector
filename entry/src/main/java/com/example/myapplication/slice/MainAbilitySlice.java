@@ -33,7 +33,6 @@ public class MainAbilitySlice extends AbilitySlice {
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
-
         SocailConnect s = (SocailConnect) findComponentById(ResourceTable.Id_image1);
         s.setContext(this, ACTION_1);
         SocailConnect s1 = (SocailConnect) findComponentById(ResourceTable.Id_image2);
