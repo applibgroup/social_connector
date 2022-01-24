@@ -24,18 +24,12 @@ import java.util.TimerTask;
 
 
 public class SocailConnect extends Image implements Component.ClickedListener, ohos.agp.render.render3d.Component {
-
     private static final String TAG = SocailConnect.class.getSimpleName();
-
     private static final int DOMAIN = 0xD000100;
-
     private static final HiLogLabel LABEL = new HiLogLabel(
             HiLog.LOG_APP, DOMAIN, TAG);
-
     private Context d;
-
     private String uri;
-
     private static final int  IMAGETYPE = 0;
 
     public SocailConnect(Context context) {
@@ -91,7 +85,6 @@ public class SocailConnect extends Image implements Component.ClickedListener, o
         return pixelMappingOptional;
     }
 
-
     @Override
     public void onClick(Component component) {
         Timer time = new Timer();
@@ -129,6 +122,7 @@ public class SocailConnect extends Image implements Component.ClickedListener, o
     {
         return d;
     }
+
     public String getUrl()
     {
         return uri;

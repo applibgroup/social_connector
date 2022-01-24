@@ -26,13 +26,13 @@ import com.example.socialconnector.SocailConnect;
  * @return 42
  */
 public class MainAbilitySlice extends AbilitySlice {
-
     private static final String ACTION_1 = "https://www.instagram.com";
 
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
+
         SocailConnect s = (SocailConnect) findComponentById(ResourceTable.Id_image1);
         s.setContext(this, ACTION_1);
         SocailConnect s1 = (SocailConnect) findComponentById(ResourceTable.Id_image2);
