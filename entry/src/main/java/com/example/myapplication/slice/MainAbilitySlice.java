@@ -33,13 +33,13 @@ public class MainAbilitySlice extends AbilitySlice {
         super.setUIContent(ResourceTable.Layout_ability_main);
 
         SocailConnect s = (SocailConnect) findComponentById(ResourceTable.Id_image1);
-        s.setContext(this,"https://www.instagram.com/chanakya_raghavendra/");
+        s.setContext(this, "https://www.instagram.com/chanakya_raghavendra/");
         SocailConnect s1 = (SocailConnect) findComponentById(ResourceTable.Id_image2);
-        s1.setContext(this,"https://www.instagram.com/chanakya_raghavendra/");
+        s1.setContext(this, "https://www.instagram.com/chanakya_raghavendra/");
         SocailConnect s2 = (SocailConnect) findComponentById(ResourceTable.Id_image3);
-        s2.setContext(this,"https://www.instagram.com/chanakya_raghavendra/");
+        s2.setContext(this, "https://www.instagram.com/chanakya_raghavendra/");
         SocailConnect s3 = (SocailConnect) findComponentById(ResourceTable.Id_image4);
-        s3.setContext(this,"https://www.instagram.com/chanakya_raghavendra/");
+        s3.setContext(this, "https://www.instagram.com/chanakya_raghavendra/");
     }
 
     @Override
