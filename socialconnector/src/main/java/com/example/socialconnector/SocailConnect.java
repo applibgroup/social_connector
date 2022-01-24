@@ -24,16 +24,12 @@ import java.util.TimerTask;
 
 
 public class SocailConnect extends Image implements Component.ClickedListener, ohos.agp.render.render3d.Component {
-
     private static final String TAG = SocailConnect.class.getSimpleName();
-
     private static final int DOMAIN = 0xD000100;
-
     private static final HiLogLabel LABEL = new HiLogLabel(
             HiLog.LOG_APP, DOMAIN, TAG);
-
     private Context d;
-
+    private String uri;
     private static final int  IMAGETYPE = 0;
 
     public SocailConnect(Context context) {
@@ -89,7 +85,6 @@ public class SocailConnect extends Image implements Component.ClickedListener, o
         return pixelMappingOptional;
     }
 
-
     @Override
     public void onClick(Component component) {
         Timer time = new Timer();
@@ -108,22 +103,28 @@ public class SocailConnect extends Image implements Component.ClickedListener, o
     public void launch()
     {
         Intent intent = new Intent();
-        String uri = "https://appgallery.cloud.huawei.com/appDetail?pkgName=";
+        String ur = getUrl();
 
         Operation operation = new Intent.OperationBuilder()
-                .withUri(Uri.parse(uri + "com.enrique.apprater"))
+                .withUri(Uri.parse(ur))
                 .build();
         intent.setOperation(operation);
         getC().startAbility(intent, AbilityInfo.AbilityType.WEB.ordinal());
     }
 
-    public void setContext(Context c)
+    public void setContext(Context c,String ur)
     {
         this.d=c;
+        this.uri=ur;
     }
 
     public Context getC()
     {
         return d;
+    }
+
+    public String getUrl()
+    {
+        return uri;
     }
 }
