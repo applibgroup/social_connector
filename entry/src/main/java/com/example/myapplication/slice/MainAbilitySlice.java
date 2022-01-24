@@ -28,6 +28,7 @@ import com.example.socialconnector.SocailConnect;
 public class MainAbilitySlice extends AbilitySlice {
 
     private static final String ACTION_1 = "https://www.instagram.com";
+
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
